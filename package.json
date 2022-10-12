@@ -1,0 +1,22 @@
+{
+  "name": "memotest_with_bootstrap",
+  "version": "1.0.0",
+  "description": "Classic Memory Game to use DOM and Bootstrap",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivankaczek/memotest-with-bootstrap.git"
+  },
+  "author": "Ivan Tkaczek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ivankaczek/memotest-with-bootstrap/issues"
+  },
+  "homepage": "https://github.com/ivankaczek/memotest-with-bootstrap#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.2"
+  }
+}
