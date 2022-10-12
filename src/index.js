@@ -89,28 +89,5 @@ function evaluarFinDeJuego() {
 	}
 
 
-/*
-
-	function manejarClickCuadro($cuadroActual) {
-	mostrarCuadro($cuadroActual);
-
-	if ($primerCuadro === null) {
-	$primerCuadro = $cuadroActual;
-	} else {
-	if ($primerCuadro === $cuadroActual) {
-	return;
-	}
-	turnos++;
-	if (cuadrosSonIguales($primerCuadro, $cuadroActual)) {
-	eliminarCuadro($primerCuadro);
-	eliminarCuadro($cuadroActual);
-	} else {
-	ocultarCuadro($primerCuadro);
-	ocultarCuadro($cuadroActual);
-	}
-	$primerCuadro = null;
-	}
-	}
-*/
 
 configuarJuego();
