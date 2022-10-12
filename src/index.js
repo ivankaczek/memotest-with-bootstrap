@@ -14,6 +14,7 @@ function configuarJuego(){
 
 function manejarEventos($tablero){
     $tablero.onclick = function(e) {
+        //debugger;
         const $elemento = e.target;
         if($elemento.classList.contains('cuadro')){
             manejarClickCuadro($elemento);
@@ -56,5 +57,60 @@ function manejarClickCuadro($cuadroActual) {
 	}
 }
 
+function mostrarCuadro($cuadro){
+	$cuadro.style.opacity = '1';
+}
+
+function ocultarCuadro($cuadro){
+	setTimeout(function(){
+	$cuadro.style.opacity = '0';
+	}, 500);
+}
+
+
+function cuadrosSonIguales($cuadro1,$cuadro2) {
+	return $cuadro1.className === $cuadro2.className;
+}
+
+function eliminarCuadro($cuadro) {
+	setTimeout(function(){
+	$cuadro.parentElement.classList.add('completo');
+	$cuadro.remove();
+    evaluarFinDeJuego();
+	}, 500);
+}
+	
+function evaluarFinDeJuego() {
+	if (document.querySelectorAll('.cuadro').length === 0) {
+	$tablero.style.display = 'none';
+	$mensajeFinJuego.querySelector('strong').textContent = turnos.toString();
+	$mensajeFinJuego.style.display = 'block';
+	}
+	}
+
+
+/*
+
+	function manejarClickCuadro($cuadroActual) {
+	mostrarCuadro($cuadroActual);
+
+	if ($primerCuadro === null) {
+	$primerCuadro = $cuadroActual;
+	} else {
+	if ($primerCuadro === $cuadroActual) {
+	return;
+	}
+	turnos++;
+	if (cuadrosSonIguales($primerCuadro, $cuadroActual)) {
+	eliminarCuadro($primerCuadro);
+	eliminarCuadro($cuadroActual);
+	} else {
+	ocultarCuadro($primerCuadro);
+	ocultarCuadro($cuadroActual);
+	}
+	$primerCuadro = null;
+	}
+	}
+*/
 
 configuarJuego();
